@@ -51,15 +51,23 @@ pip install -r requirements.txt
 
 ### 4. Configure your API key
 
-Create a `.env` file in the project root:
+Create a `.env` file in the project root with your IAC student credentials:
 
 ```
-API_KEY=your_iac_api_key_here
+API_KEY=
 ID=your_iac_id_here
 PASSWORD=your_iac_password_here
 ```
 
-> ⚠️ **Security:** Make sure `.env` is listed in your `.gitignore` file so your key is never committed to version control.
+Then run `get_api_key.py` to fetch and fill in your API key automatically:
+
+```bash
+python get_api_key.py
+```
+
+This script uses your `ID` and `PASSWORD` to retrieve your API key from the IAC server and writes it into the `API_KEY` field in your `.env` file. You only need to run this once.
+
+> ⚠️ **Security:** Make sure `.env` is listed in your `.gitignore` file so your credentials are never committed to version control.
 
 ---
 
