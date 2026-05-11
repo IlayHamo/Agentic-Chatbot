@@ -13,7 +13,7 @@ AGENTIC_API_URL = f"{BASE_URL}/responses"
 
 MAX_HISTORY_MESSAGES = 10
 MAX_TOKENS = 10000
-REQUEST_TIMEOUT = 30
+REQUEST_TIMEOUT = 180   # seconds
 
 
 def _get_headers() -> dict[str, str]:
